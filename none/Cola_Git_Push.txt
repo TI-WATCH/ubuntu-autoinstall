@@ -1,7 +1,4 @@
 git add .
-----
 git commit -m "Nome do bglh"
-----
 git push -u origin main
-----
 git status
