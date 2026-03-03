@@ -11,15 +11,14 @@ autoinstall:
         layout: br
     timezone: "America/Sao_Paulo"   
     packages:
-        - wget
         - nano
-        - git
         - htop
-        - ubuntu-restricted-extras
-        - linux-tools-generic
-        - software-properties-common
-        - python3-pip
         - default-jdk
+        - git
+        - wget
+    late-commands:
+        - curtin in-target -- bash -c "wget -O /tmp/google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+        - curtin in-target -- bash -c "apt install -y /tmp/google-chrome.deb"
     snaps:
         - name: spotify
           channel: stable
@@ -30,5 +29,4 @@ autoinstall:
         install: true
     updates: all
     shutdown: reboot
-
 
