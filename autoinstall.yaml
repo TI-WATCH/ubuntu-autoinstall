@@ -2,14 +2,14 @@
 autoinstall:
     version: 1
     identity:
-        realname: 'nome'
-        hostname: patrimonio
+        realname: 'WATCH BRASIL'
+        hostname: CWB-00085-LTP
         username: WATCH BRASIL
         password: '$y$j9T$yuRw3ya/sHG9FtH041qrw.$pMz4zC0mGJGWCzgmQqROfDsIWaVo2MUD9IshD0rujh0'
     locale: pt_BR.utf8
     keyboard:
         layout: br
-    timezone: "America/Sao_Paulo"   
+    timezone: "America/Sao_Paulo"
     packages:
         - wget
         - nano
@@ -27,8 +27,14 @@ autoinstall:
     codecs:
         install: true
     drivers:
-        install: true
-    updates: all
-    shutdown: reboot
+        updates: all
 
+        late-commands:
+          - curtin in-target -- apt-get update
+          - curtin in-target -- apt-get install -y git python3 ca-certificates
+          - curtin in-target -- bash -c "git clone https://github.com/TI-WATCH/ubuntu-autoinstall.git /opt/ubuntu-autoinstall"
+          - curtin in-target -- bash -c "chmod +x /opt/ubuntu-autoinstall/setup_mdatp.sh"
+          - curtin in-target -- bash -c "/opt/ubuntu-autoinstall/setup_mdatp.sh | tee /var/log/setup_mdatp.log"
+
+    shutdown: reboot
 
