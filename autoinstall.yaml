@@ -29,12 +29,12 @@ autoinstall:
     drivers:
         updates: all
 
-        late-commands:
-          - curtin in-target -- apt-get update
-          - curtin in-target -- apt-get install -y git python3 ca-certificates
-          - curtin in-target -- bash -c "git clone https://github.com/TI-WATCH/ubuntu-autoinstall.git /opt/ubuntu-autoinstall"
-          - curtin in-target -- bash -c "chmod +x /opt/ubuntu-autoinstall/setup_mdatp.sh"
-          - curtin in-target -- bash -c "/opt/ubuntu-autoinstall/setup_mdatp.sh | tee /var/log/setup_mdatp.log"
+    late-commands:
+      - curtin in-target -- apt-get update
+      - curtin in-target -- apt-get install -y git python3 ca-certificates
+      - curtin in-target -- bash -c "git clone https://github.com/TI-WATCH/ubuntu-autoinstall.git /opt/ubuntu-autoinstall"
+      - curtin in-target -- bash -c "chmod +x /opt/ubuntu-autoinstall/setup_mdatp.sh"
+      - curtin in-target -- bash -c "/opt/ubuntu-autoinstall/setup_mdatp.sh | tee /var/log/setup_mdatp.log"
 
     shutdown: reboot
 
