@@ -4,7 +4,7 @@ autoinstall:
     identity:
         realname: 'WATCH BRASIL'
         hostname: CWB-00085-LTP
-        username: WATCH BRASIL
+        username: watch
         password: '$y$j9T$yuRw3ya/sHG9FtH041qrw.$pMz4zC0mGJGWCzgmQqROfDsIWaVo2MUD9IshD0rujh0'
     locale: pt_BR.utf8
     keyboard:
