@@ -10,6 +10,10 @@ autoinstall:
     keyboard:
         layout: br
     timezone: "America/Sao_Paulo"
+    storage:
+        layout:
+            name: lvm
+            password: "Watch0175%"
     packages:
         - wget
         - nano
