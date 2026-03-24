@@ -2,9 +2,9 @@
 autoinstall:
     version: 1
     identity:
-        realname: 'WATCH BRASIL'
+        realname: 'PEDRO ICARO'
         hostname: RGN-00411-LTP
-        username: watch
+        username: pedro
         password: '$y$j9T$/cdKb2.w38nNCCQXmBFPc.$nuK5fTR4.CPAXPd0Y1wjnpQmk22SqHPkN1SsK4xZqC4'
     locale: pt_BR.utf8
     keyboard:
