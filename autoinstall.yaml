@@ -2,8 +2,8 @@
 autoinstall:
     version: 1
     identity:
-        realname: 'PEDRO ICARO'
-        hostname: RGN-00411-LTP
+        realname: 'CLEYTON'
+        hostname: RGN-00412-LTP
         username: pedro
         password: '$y$j9T$/cdKb2.w38nNCCQXmBFPc.$nuK5fTR4.CPAXPd0Y1wjnpQmk22SqHPkN1SsK4xZqC4'
     locale: pt_BR.utf8
