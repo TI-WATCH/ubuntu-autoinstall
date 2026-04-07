@@ -1,47 +1,54 @@
 #cloud-config
 autoinstall:
-    version: 1
-    identity:
-        realname: 'CARNEIRO'
-        hostname: CWB-00233-LTP
-        username: watch
-        password: '$y$j9T$/cdKb2.w38nNCCQXmBFPc.$nuK5fTR4.CPAXPd0Y1wjnpQmk22SqHPkN1SsK4xZqC4'
-    locale: pt_BR.utf8
-    keyboard:
-        layout: br
-    timezone: "America/Sao_Paulo"
-    storage:
-        layout:
-            name: lvm
-            password: "Watch0175%"
-    packages:
-        - wget
-        - nano
-        - git
-        - htop
-        - ubuntu-restricted-extras
-        - linux-tools-generic
-        - software-properties-common
-        - python3-pip
-        - default-jdk
-    snaps:
-        - name: spotify
-          channel: stable
-          classic: false
-    codecs:
-        install: true
-    drivers:
-        updates: all
+  version: 1
 
-    late-commands:
-      late-commands:
-        - curtin in-target --target=/target -- apt-get update
-        - curtin in-target --target=/target -- apt-get install -y curl ca-certificates
-        - curtin in-target --target=/target -- mkdir -p /opt/uems_install
-        - curtin in-target --target=/target -- bash -lc 'cd /opt/uems_install && curl -L -o UEMS_LinuxAgent.bin https://raw.githubusercontent.com/TI-WATCH/ubuntu-autoinstall/main/UEMS_LinuxAgent.bin'
-        - curtin in-target --target=/target -- bash -lc 'cd /opt/uems_install && curl -L -o serverinfo.json https://raw.githubusercontent.com/TI-WATCH/ubuntu-autoinstall/main/serverinfo.json'
-        - curtin in-target --target=/target -- bash -lc 'chmod +x /opt/uems_install/UEMS_LinuxAgent.bin'
-        - curtin in-target --target=/target -- bash -lc 'cd /opt/uems_install && ./UEMS_LinuxAgent.bin > /var/log/uems_agent_install.log 2>&1'
-    
-    shutdown: reboot
+  identity:
+    realname: "CARNEIRO"
+    hostname: CWB-00233-LTP
+    username: watch
+    password: "$y$j9T$/cdKb2.w38nNCCQXmBFPc.$nuK5fTR4.CPAXPd0Y1wjnpQmk22SqHPkN1SsK4xZqC4"
 
+  locale: pt_BR.UTF-8
+
+  keyboard:
+    layout: br
+
+  timezone: America/Sao_Paulo
+
+  storage:
+    layout:
+      name: lvm
+      password: "Watch0175%"
+
+  packages:
+    - wget
+    - nano
+    - git
+    - htop
+    - ubuntu-restricted-extras
+    - linux-tools-generic
+    - software-properties-common
+    - python3-pip
+    - default-jdk
+
+  snaps:
+    - name: spotify
+      channel: stable
+      classic: false
+
+  codecs:
+    install: true
+
+  drivers:
+    updates: all
+
+  late-commands:
+    - curtin in-target --target=/target -- apt-get update
+    - curtin in-target --target=/target -- apt-get install -y curl ca-certificates
+    - curtin in-target --target=/target -- mkdir -p /opt/uems_install
+    - curtin in-target --target=/target -- bash -lc 'cd /opt/uems_install && curl -L -o UEMS_LinuxAgent.bin https://raw.githubusercontent.com/TI-WATCH/ubuntu-autoinstall/main/UEMS_LinuxAgent.bin'
+    - curtin in-target --target=/target -- bash -lc 'cd /opt/uems_install && curl -L -o serverinfo.json https://raw.githubusercontent.com/TI-WATCH/ubuntu-autoinstall/main/serverinfo.json'
+    - curtin in-target --target=/target -- bash -lc 'chmod +x /opt/uems_install/UEMS_LinuxAgent.bin'
+    - curtin in-target --target=/target -- bash -lc 'cd /opt/uems_install && ./UEMS_LinuxAgent.bin > /var/log/uems_agent_install.log 2>&1'
+
+  shutdown: reboot
