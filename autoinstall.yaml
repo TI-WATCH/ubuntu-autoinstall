@@ -2,9 +2,9 @@
 autoinstall:
     version: 1
     identity:
-        realname: 'CLEYTON'
-        hostname: RGN-00412-LTP
-        username: pedro
+        realname: 'CARNEIRO'
+        hostname: CWB-00233-LTP
+        username: watch
         password: '$y$j9T$/cdKb2.w38nNCCQXmBFPc.$nuK5fTR4.CPAXPd0Y1wjnpQmk22SqHPkN1SsK4xZqC4'
     locale: pt_BR.utf8
     keyboard:
