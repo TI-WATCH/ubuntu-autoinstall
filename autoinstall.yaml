@@ -3,9 +3,9 @@ autoinstall:
   version: 1
 
   identity:
-    realname: "CARNEIRO"
-    hostname: CWB-00233-LTP
-    username: watch
+    realname: "Teste Yasmin"
+    hostname: CWB-00586-LTP
+    username: yasmiN
     password: "$y$j9T$/cdKb2.w38nNCCQXmBFPc.$nuK5fTR4.CPAXPd0Y1wjnpQmk22SqHPkN1SsK4xZqC4"
 
   locale: pt_BR.UTF-8
