@@ -3,9 +3,9 @@ autoinstall:
   version: 1
 
   identity:
-    realname: "Teste Yasmin"
-    hostname: CWB-00586-LTP
-    username: yasmiN
+    realname: "TESTE YASMIN"
+    hostname: CWB-00000-LTP
+    username: YASMIN
     password: "$y$j9T$/cdKb2.w38nNCCQXmBFPc.$nuK5fTR4.CPAXPd0Y1wjnpQmk22SqHPkN1SsK4xZqC4"
 
   locale: pt_BR.UTF-8
@@ -46,9 +46,9 @@ autoinstall:
     - curtin in-target --target=/target -- apt-get update
     - curtin in-target --target=/target -- apt-get install -y curl ca-certificates
     - curtin in-target --target=/target -- mkdir -p /opt/uems_install
-    - curtin in-target --target=/target -- bash -lc 'cd /opt/uems_install && curl -L -o UEMS_LinuxAgent.bin https://raw.githubusercontent.com/TI-WATCH/ubuntu-autoinstall/main/UEMS_LinuxAgent.bin'
+    - curtin in-target --target=/target -- bash -lc 'cd /opt/uems_install && curl -L -o UEMS_LinuxAgent_x64.bin https://raw.githubusercontent.com/TI-WATCH/ubuntu-autoinstall/main/UEMS_LinuxAgent_x64.bin'
     - curtin in-target --target=/target -- bash -lc 'cd /opt/uems_install && curl -L -o serverinfo.json https://raw.githubusercontent.com/TI-WATCH/ubuntu-autoinstall/main/serverinfo.json'
-    - curtin in-target --target=/target -- bash -lc 'chmod +x /opt/uems_install/UEMS_LinuxAgent.bin'
-    - curtin in-target --target=/target -- bash -lc 'cd /opt/uems_install && ./UEMS_LinuxAgent.bin > /var/log/uems_agent_install.log 2>&1'
+    - curtin in-target --target=/target -- bash -lc 'chmod +x /opt/uems_install/UEMS_LinuxAgent_x64.bin'
+    - curtin in-target --target=/target -- bash -lc 'cd /opt/uems_install && ./UEMS_LinuxAgent_x64.bin > /var/log/uems_agent_install.log 2>&1'
 
   shutdown: reboot
