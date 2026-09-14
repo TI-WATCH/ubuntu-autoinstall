@@ -3,9 +3,9 @@ autoinstall:
   version: 1
 
   identity:
-    realname: "TESTE YASMIN"
-    hostname: CWB-00000-LTP
-    username: YASMIN
+    realname: "Clayton Jatobá"
+    hostname: RGN-00546-LTP
+    username: Clayton Jatobá
     password: "$y$j9T$/cdKb2.w38nNCCQXmBFPc.$nuK5fTR4.CPAXPd0Y1wjnpQmk22SqHPkN1SsK4xZqC4"
 
   locale: pt_BR.UTF-8
