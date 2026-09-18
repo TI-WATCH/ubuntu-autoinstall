@@ -3,9 +3,9 @@ autoinstall:
   version: 1
 
   identity:
-    realname: "Clayton Jatobá"
-    hostname: RGN-00546-LTP
-    username: clayton
+    realname: "Amanda Soares"
+    hostname: CWB-00429-LTP
+    username: amanda-soares
     password: "$y$j9T$/cdKb2.w38nNCCQXmBFPc.$nuK5fTR4.CPAXPd0Y1wjnpQmk22SqHPkN1SsK4xZqC4"
 
   locale: pt_BR.UTF-8
