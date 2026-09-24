@@ -3,9 +3,9 @@ autoinstall:
   version: 1
 
   identity:
-    realname: "Jair Araujo"
-    hostname: RGN-00587-LTP
-    username: jair-araujo
+    realname: "Izaac Lederer"
+    hostname: CWB-00411-LTP
+    username: izaac-lederer
     password: "$y$j9T$/cdKb2.w38nNCCQXmBFPc.$nuK5fTR4.CPAXPd0Y1wjnpQmk22SqHPkN1SsK4xZqC4"
 
   locale: pt_BR.UTF-8
